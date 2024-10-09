@@ -65,7 +65,7 @@ Improve the user interface with more interactive elements.
 Expand the dataset to include movies from more Indian languages and regions.
 
 Contributors : 
-Nithya - Project Developer , 
+Nithya Sri - Project Developer , 
 Prashuna - Project Developer
 
 License
