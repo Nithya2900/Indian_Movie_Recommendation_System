@@ -1,0 +1,51 @@
+body {
+    background-image: url('indian-cinema.png'); /* Update with your image path */
+    background-size: 1380px; /* Ensures the entire image fits without cropping */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #141414; /* Netflix dark background */
+    padding: 15px; /* Add padding to the header */
+    text-align: center; /* Center the header text */
+    position: relative; /* Positioning context for absolute children if needed */
+}
+
+#main-container {
+    max-width: 600px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    flex: 1; /* Allow the container to take available space */
+}
+
+h1 {
+    color: #ffffff; /* Header text color */
+}
+
+.btn-primary {
+    background-color: #e50914; /* Netflix red */
+    border-color: #e50914; /* Netflix red */
+}
+
+.list-group-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent for soft effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+    transition: background-color 0.3s;
+}
+
+.list-group-item:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
+}
+
+footer {
+    background-color: #141414; /* Netflix dark background */
+    color: #ffffff; /* Footer text color */
+    text-align: center; /* Center the footer text */
+    padding: 10px; /* Padding for the footer */
+    position: relative; /* Positioning context for the footer */
+    bottom: 0; /* Align footer at the bottom */
+    width: 100%; /* Full width for the footer */
+}
+

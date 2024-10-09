@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title> Movie Recommendation</title>
+    <style>
+        body {
+            background-color: #2e2e2e; /* Dark grey background */
+            color: white;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .movie-title {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        #main-container {
+            margin-top: 50px;
+        }
+        .form-control {
+            border-radius: 25px;
+            background-color: #4d4d4d;
+            color: white;
+            border: 1px solid #ff4d4d; /* Red border */
+        }
+        .btn-primary {
+            border-radius: 25px;
+            background-color: #ff4d4d; /* Red theme */
+            border-color: #ff4d4d;
+        }
+        .btn-primary:hover {
+            background-color: #e60000; /* Darker red on hover */
+            border-color: #e60000;
+        }
+        header, footer {
+            background-color: #ef1717; /* Darker background for header and footer */
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #ff4d4d; /* Red controls */
+            border-radius: 50%;
+        }
+        footer p {
+            color: white; 
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Header -->
+    <header class="text-white text-center py-3">
+        <h1>Movie Mate</h1>
+    </header>
+
+    <!-- Movie Search Form -->
+    <div class="container mt-5 flex-fill" id="main-container">
+        <form method="POST" action="/recommend" class="mt-4">
+            <div class="form-group">
+                <label for="movie_title">Enter a Movie Title:</label>
+                <input type="text" id="movie_title" name="movie_title" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Get Recommendations</button>
+        </form>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-3 mt-auto">
+        <p>&copy; 2024  Movie Recommendation. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+

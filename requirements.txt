@@ -1,0 +1,5 @@
+Flask==2.0.1
+pandas==1.3.3
+gunicorn==20.1.0  # For production server (optional, use if deploying to platforms like Heroku)
+numpy==1.21.2     # In case your recommendation logic involves numpy (often used with pandas)
+scikit-learn==0.24.2  # In case you use machine learning for recommendations (optional)

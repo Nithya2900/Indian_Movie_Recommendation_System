@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Recommended Movies</title>
+    <style>
+        body {
+            background-color: #2e2e2e; /* Dark grey background */
+            color: white;
+        }
+        .carousel-item {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .movie-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #ef1717; /* Red color for movie title */
+        }
+        #main-container {
+            margin-top: 50px;
+        }
+        .form-control {
+            border-radius: 25px;
+            background-color: #4d4d4d;
+            color: white;
+            border: 1px solid #ff4d4d; /* Red border */
+        }
+        .btn-primary {
+            border-radius: 25px;
+            background-color: #ef1717; /* Red theme */
+            border-color: #ff4d4d;
+        }
+        .btn-primary:hover {
+            background-color: #e60000; /* Darker red on hover */
+            border-color: #e60000;
+        }
+        header, footer {
+            background-color: #ef1717; /* Darker background for header and footer */
+        }
+        footer p {
+            color: white;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Header -->
+    <header class="text-white text-center py-3">
+        <h1>Recommended Movies</h1>
+    </header>
+
+    <!-- Movie Recommendations Carousel -->
+    <div class="container mt-5 flex-fill" id="main-container">
+        <h3 class="text-center">Here are your recommendations</h3>
+        <div id="recommendationCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Generate each carousel item dynamically -->
+                {% for rec in recommendations %}
+                    {% if loop.index == 1 %}
+                        <!-- First carousel item (active) -->
+                        <div class="carousel-item active">
+                    {% else %}
+                        <div class="carousel-item">
+                    {% endif %}
+                        <p class="movie-title">{{ rec }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <!-- Carousel Controls -->
+            <a class="carousel-control-prev" href="#recommendationCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#recommendationCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+       <a href="/" class="btn mt-4" style="background-color: #ef1717; border-color: #e50914; color: #ffffff;">Go Back</a>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-3 mt-auto">
+        <p>&copy; 2024 Movie Recommendation System. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
